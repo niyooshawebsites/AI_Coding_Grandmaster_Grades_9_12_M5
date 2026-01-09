@@ -1,0 +1,13 @@
+
+{
+    "_comment": "JSON stands for JavaScript Object Notation",
+    "name": "Tarun",
+    "age": 22,
+    "address": {
+        "street": "12 Main street",
+        "city": "New York",
+        "state": "NY",
+        "zip": 11442        
+    },
+    "isMarried": true
+}

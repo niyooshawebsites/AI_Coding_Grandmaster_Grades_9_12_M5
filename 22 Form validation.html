@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          if (!username || !password) {
+            alert("Please fill out all the fields");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="username" placeholder="username" />
+      <input type="password" id="password" placeholder="password" />
+      <input type="submit" value="Login" />
+    </form>
+  </body>
+</html>

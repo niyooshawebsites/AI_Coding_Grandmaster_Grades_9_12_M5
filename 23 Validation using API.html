@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>23 Validation using API</title>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("form");
+        const inputObj = document.getElementById("age");
+        const errorElement = document.getElementById("errorMessage");
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault(); // stop form submission
+          if (!inputObj.checkValidity()) {
+            errorElement.textContent = inputObj.validationMessage;
+          } else {
+            errorElement.textContent = "Input OK";
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form novalidate>
+      <input
+        type="number"
+        min="18"
+        max="25"
+        required
+        id="age"
+        placeholder="age"
+      />
+      <span id="errorMessage"></span><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
